@@ -1,0 +1,22 @@
+.item {
+  display: flex;
+  align-items: center;
+  height: 90px;
+  margin: auto;
+  margin-top: 10px;
+  width: 300px;
+  background-color: ghostwhite;
+  box-shadow: 2px 2px 2px dimgray;
+}
+
+.status {
+  width: 20px;
+  height: 20px;
+  margin: 10px;
+  border-radius: 50%;
+}
+.name {
+  font-weight: 500;
+  font-size: x-large;
+  margin-left: 20px;
+}
