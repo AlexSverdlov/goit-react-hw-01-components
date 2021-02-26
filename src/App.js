@@ -1,64 +1,37 @@
-import './App.css';
+// Импорт компонентов
 import Profile from './components/Profile/Profile';
 import Statistics from './components/Statistics/Statistics';
 import FriendList from './components/FriendList/FriendList';
 import TransactionHistory from './components/TransactionHistory/TransactionHistory';
+// Импорт данных
 import user from './db/user.json';
 import statisticalData from './db/statistical-data.json';
 import friends from './db/friends.json';
 import transactions from './db/transactions.json';
+// Импорт css
+import './App.css';
 
 function App() {
   return (
     <>
       {/* Задание №1 */}
-      <div
-        style={{
-          paddingTop: '50px',
-          paddingBottom: '20px',
-        }}
-      >
-        <Profile
-          name={user.name}
-          tag={user.tag}
-          avatar={user.avatar}
-          location={user.location}
-          stats={user.stats}
-        />
-      </div>
+      <Profile
+        name={user.name}
+        tag={user.tag}
+        avatar={user.avatar}
+        location={user.location}
+        stats={user.stats}
+      />
 
       {/* Задание №2 */}
-      <div
-        style={{
-          paddingTop: '50px',
-          paddingBottom: '20px',
-          backgroundColor: 'bisque',
-          display: 'flex',
-          justifyContent: 'space-evenly',
-        }}
-      >
-        <Statistics title="Upload stats" stats={statisticalData} />
-        <Statistics stats={statisticalData} />
-      </div>
+      <Statistics title="Upload stats" stats={statisticalData} />
+      <Statistics stats={statisticalData} />
+
       {/* Задание №3 */}
-      <div
-        style={{
-          paddingTop: '50px',
-          paddingBottom: '20px',
-        }}
-      >
-        <FriendList friends={friends} />
-      </div>
+      <FriendList friends={friends} />
+
       {/* Задание №4 */}
-      <div
-        style={{
-          paddingTop: '50px',
-          paddingBottom: '20px',
-          backgroundColor: 'bisque',
-        }}
-      >
-        <TransactionHistory transactions={transactions} />
-      </div>
+      <TransactionHistory transactions={transactions} />
     </>
   );
 }
